@@ -244,3 +244,75 @@ console.log(extractKey(groupNames, 'name'));
 // ])
 // ['Elie Schoppik', 'Tim Garcia', 'Matt Lane', 'Colt Steele']
 // ++++++++++++++++++++++++++++++++++++++++++++++++++
+console.log('a:9 ---------------------------------');
+const fullNames = [
+  { first: 'kankuro', last: 'Tadeo' },
+  { first: 'Joe', last: 'Rogan' },
+  { first: 'Leo', last: 'Dicaprio' },
+  { first: 'John', last: 'Snow' },
+  { first: 'Kalisi', last: 'Ramera' },
+  { first: 'Otto', last: 'Porter' },
+];
+function extractFullName(arr) {
+  const newArr = arr.map(function (value, key) {
+    return `${value.first} ${value.last}`;
+  });
+  return newArr;
+}
+console.log(extractFullName(fullNames));
+// ==================================================
+// >>>>>>>>>>>>>>>>>>>> Filter <<<<<<<<<<<<<<<<<<<<<<
+// ==================================================
+// 10. filterByValue
+// --------------------------------------------------
+// Write a function called filterByValue which accepts
+// an array of objects and a key and returns a new array
+// with all the objects that contain that key.
+// ++++++++++++++++++++++++++++++++++++++++++++++++++
+// filterByValue(
+//   [
+//     {first: 'Elie', last:"Schoppik"},
+//     {first: 'Tim', last:"Garcia", isCatOwner: true},
+//     {first: 'Matt', last:"Lane"},
+//     {first: 'Colt', last:"Steele", isCatOwner: true}
+//   ],
+//   'isCatOwner'
+//   )
+
+/*
+    [
+      {first: 'Tim', last:"Garcia", isCatOwner: true},
+      {first: 'Colt', last:"Steele", isCatOwner: true}
+    ]
+  */
+// ++++++++++++++++++++++++++++++++++++++++++++++++++
+console.log('a:10 ---------------------------------');
+const participants = [
+  { first: 'Juan', last: 'Rojas' },
+  { first: 'Andrea', last: 'Bernal' },
+  { first: 'Viviana', last: 'Leal', isPetOwner: true },
+  { first: 'Samuel', last: 'Cardenal' },
+  { first: 'Adriano', last: 'Pacheco', isPetOwner: true },
+];
+function filterByValue(array, data) {
+  const filteredArr = array.filter(function (value, key) {
+    if (value[data]) return value;
+  });
+  return filteredArr;
+}
+console.log(filterByValue(participants, 'isPetOwner'));
+// --------------------------------------------------
+// 11. find
+// --------------------------------------------------
+// Write a function called find which accepts an array
+// and a value and returns the first element in the array
+// that has the same value as the second parameter or
+// undefined if the value is not found in the array.
+// ++++++++++++++++++++++++++++++++++++++++++++++++++
+// find([1,2,3,4,5], 3) // 3
+// find([1,2,3,4,5], 10) // undefined
+// ++++++++++++++++++++++++++++++++++++++++++++++++++
+console.log('a:11 ---------------------------------');
+function find(arr) {
+  console.log(arr);
+}
